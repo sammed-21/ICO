@@ -1,10 +1,10 @@
 const { ethers } = require("hardhat");
 require("dotenv").config();
 
-const { CRYPTO_DEVS_NFT_CONTRACT_ADDRESS } = require("../constants");
+const { NFT_CONTRACT_ADDRESS } = require("../constants");
 
 async function main() {
-  const cryptoDevNftContract = CRYPTO_DEVS_NFT_CONTRACT_ADDRESS;
+  const cryptoDevNftContract = NFT_CONTRACT_ADDRESS;
 
   const cryptoDevTokenContract = await ethers.getContractFactory(
     "CryptoDevToken"

@@ -137,12 +137,15 @@ export default function Home() {
   };
   const claimCryptoDevTokens = async () => {
     try {
+      console.warn("clicked");
       const signer = await getProviderOrSigner(true);
+      console.warn("clicked");
       const tokenContract = new Contract(
         TOKEN_CONTRACT_ADDRESS,
         TOKEN_CONTRACT_ABI,
         signer
       );
+      console.warn("clicked");
       const tx = await tokenContract.claim();
       setLoading(true);
       await tx.wait();
