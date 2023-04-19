@@ -31,8 +31,8 @@ export default function Home() {
     // If user is not connected to the Goerli network, let them know and throw an error
     const { chainId } = await web3Provider.getNetwork();
     if (chainId !== 11155111) {
-      window.alert("Change the network to sepolia or goerli");
-      throw new Error("Change network to sepolia or goerli");
+      window.alert("Change the network to sepolia ");
+      throw new Error("Change network to sepolia  ");
     }
 
     if (needSigner) {
@@ -137,7 +137,6 @@ export default function Home() {
   };
   const claimCryptoDevTokens = async () => {
     try {
-      console.log("sammed");
       const signer = await getProviderOrSigner(true);
       const tokenContract = new Contract(
         TOKEN_CONTRACT_ADDRESS,
